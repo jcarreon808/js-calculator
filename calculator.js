@@ -8,7 +8,7 @@
  function calculatorModule(){
   let calculator = {};
   var _memory;
-  var _total;
+  var _total = 0 ;
 
   /**
    * sets the `total` to the number passed in
@@ -25,25 +25,35 @@
    * Return the value of `total`
    * @return { Number }
    */
+   calculator.getTotal = function(){
+    return _total;
+   };
 
 
   /**
    * Sums the value passed in with `total`
    * @param { Number } x
    */
-
+   calculator.add = function(number){
+     _total+=number;
+   };
 
   /**
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
+   calculator.subtract = function(number){
+    _total-=number;
+   };
 
 
   /**
    * Multiplies the value by `total`
    * @param  { Number } x
    */
-
+   calculator.multiply= function(number){
+    _total*=number;
+   };
 
   /**
    * Divides the value passing in by `total`
